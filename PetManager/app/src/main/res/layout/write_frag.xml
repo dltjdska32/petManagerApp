@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 취소 및 등록 버튼 -->
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="취소"
+                android:textSize="20sp"
+                android:id="@+id/cancel_btn">
+            </Button>
+
+            <Space
+                android:layout_width="235dp"
+                android:layout_height="wrap_content">
+            </Space>
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:text="등록"
+                android:id="@+id/post_btn">
+            </Button>
+        </LinearLayout>
+
+        <!-- 제목 입력 -->
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="20dp">
+        </Space>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="제목 : "
+                android:textSize="30sp">
+            </TextView>
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:hint="게시글 제목을 입력해주세요."
+                android:id="@+id/title_txt">
+            </EditText>
+        </LinearLayout>
+
+        <!-- 가격 입력 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="가격 : "
+                android:textSize="30sp">
+            </TextView>
+            <EditText
+                android:id="@+id/price_txt"
+                android:inputType="number"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:hint="가격을 입력해주세요.">
+            </EditText>
+        </LinearLayout>
+
+        <!-- 관리유형 선택 -->
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp">
+        </Space>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="관리유형  "
+                android:textSize="30sp">
+            </TextView>
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleButton1"
+                app:singleSelection="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.google.android.material.button.MaterialButton
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:id="@+id/category1_walk_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="산책" />
+                <com.google.android.material.button.MaterialButton
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:id="@+id/category1_hotel_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="호텔" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+        </LinearLayout>
+
+        <!-- 동물종류 선택 -->
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp">
+        </Space>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="동물종류  "
+                android:textSize="30sp">
+            </TextView>
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                app:singleSelection="true"
+                android:id="@+id/toggleButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.google.android.material.button.MaterialButton
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:id="@+id/category2_dog_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="개" />
+                <com.google.android.material.button.MaterialButton
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:id="@+id/category2_cat_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고양이" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+        </LinearLayout>
+
+        <!-- 날짜 선택 버튼 -->
+
+        <Button
+            android:id="@+id/date_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="140dp"
+            android:text="날짜 선택"
+            android:textSize="20sp" />
+
+        <!-- 게시물 내용 입력 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:hint="게시물을 작성해 주세요.">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/contents_edt"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:inputType="textMultiLine"
+                android:gravity="top|start"
+                android:lines="15"
+                android:minLines="10"
+                android:maxLines="10"
+                android:scrollbars="vertical" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+</ScrollView>

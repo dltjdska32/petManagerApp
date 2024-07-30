@@ -28,6 +28,6 @@ render.experimental.xml
 
 # Google Services (e.g. APIs or Firebase)
 google-services.json
-
+PetManager/app/test1-f8993-268970e3fe3a.json
 # Android Profiling
 *.hprof
